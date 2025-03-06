@@ -17,3 +17,10 @@ Script to compute a [safe tx hash](https://help.safe.global/en/articles/40814-wh
 
 - [eth-hash](https://pypi.org/project/eth-hash/) for hashing
 - [eth-abi](https://pypi.org/project/eth-abi/) for encoding
+
+## Useful links
+https://github.com/OpenZeppelin/safe-utils
+
+https://github.com/pcaversaccio/safe-tx-hashes-util
+
+https://github.com/Cyfrin/safe-tx-hashes
