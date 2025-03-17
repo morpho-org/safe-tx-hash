@@ -54,13 +54,15 @@ def compute_safe_tx_hash(tx):
         ]
     ))
 
-    tx_hash = keccak(EIP712_PREFIX + domain_separator + struct_hash)
-    return f"0x{tx_hash.hex()}"
+    safe_tx_hash = keccak(EIP712_PREFIX + domain_separator + struct_hash)
+    return f"0x{safe_tx_hash.hex()}", f"0x{domain_separator.hex()}", f"0x{struct_hash.hex()}"
 
 
 if __name__ == "__main__":
     with open("safe-tx.json", "rb") as f:
         tx = json.load(f)
 
-    tx_hash = compute_safe_tx_hash(tx)
-    print(f"Safe transaction hash: {tx_hash}")
+    tx_hash, domain_separator, struct_hash = compute_safe_tx_hash(tx)
+    print(f"Safe transaction hash:      {tx_hash}")
+    print(f"Domain hash:                {domain_separator}")
+    print(f"Message hash (struct hash): {struct_hash}")

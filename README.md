@@ -1,6 +1,6 @@
 # Safe tx hash
 
-Script to compute a [safe tx hash](https://help.safe.global/en/articles/40814-what-is-the-safe-transaction-hash-safetxhash).
+Script to compute the [safe tx hash](https://help.safe.global/en/articles/40814-what-is-the-safe-transaction-hash-safetxhash), domain hash and message hash, of a safe transaction.
 
 ## Setup
 
@@ -18,9 +18,8 @@ Script to compute a [safe tx hash](https://help.safe.global/en/articles/40814-wh
 - [eth-hash](https://pypi.org/project/eth-hash/) for hashing
 - [eth-abi](https://pypi.org/project/eth-abi/) for encoding
 
-## Useful links
-https://github.com/OpenZeppelin/safe-utils
+## Similar repos
 
-https://github.com/pcaversaccio/safe-tx-hashes-util
-
-https://github.com/Cyfrin/safe-tx-hashes
+- https://github.com/OpenZeppelin/safe-utils
+- https://github.com/pcaversaccio/safe-tx-hashes-util
+- https://github.com/Cyfrin/safe-tx-hashes

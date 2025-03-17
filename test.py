@@ -16,9 +16,15 @@ def test_safe_tx_hash():
         "chainId": 8453
     }
     
-    expected_hash = "0x1bf99e3cf2d2272960c8a02ca4163459ad240de7995bec237a886b84968a077c"
-    computed_hash = compute_safe_tx_hash(test_tx)
-    assert computed_hash == expected_hash
+    expected_tx_hash = "0x1bf99e3cf2d2272960c8a02ca4163459ad240de7995bec237a886b84968a077c"
+    expected_domain_separator = "0x837b1eb3bcc66a4b6bd9f0d8c876e31648b46ac2e66e4080ee93e97e51074cb9"
+    expected_struct_hash = "0x18100568166f32d42c2c1d01c907dabc9bec58334a125da2a2a43742764183cd"
+    
+    tx_hash, domain_separator, struct_hash = compute_safe_tx_hash(test_tx)
+    
+    assert tx_hash == expected_tx_hash
+    assert domain_separator == expected_domain_separator
+    assert struct_hash == expected_struct_hash
 
 if __name__ == "__main__":
     test_safe_tx_hash()
